@@ -1,0 +1,68 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+
+
+	<div class="col-lg-12">
+
+		<div class="col-lg-3 side-nav">
+
+			<div class="thumbnail" style="border-radius:0px;">
+				<img src="http://www.cameroonvoice.com/resources/images/bank/ewrtgh.jpg" alt="...">
+
+				<div class="caption">
+					<p class="text-center">
+						<span style="font-size: 2em">{{ user.username }}</span>
+						<br>
+						<a href="{{ path('fos_user_profile_edit') }}">Edit Profile</a><br>
+					</p>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+			{#
+			<div class="panel panel-default" style="border-radius:0px;">
+
+				<div class="panel-heading">
+				
+				</div>
+
+				<div class="panel-body" >
+					<p class="text-center">
+						<span style="font-size: 2em">{{ user.username }}</span>
+						<br>
+						<a href="#">Edit Profile</a><br>
+					</p>
+				</div>
+			</div>
+			#}
+		</div>
+
+		<div class="col-lg-9">
+
+			{{ user.lastLogin|date("F j Y") }}
+		</div>
+
+	</div>
+
+	<div class="col-lg-12">
+
+		<div class="col-lg-3 side-nav">
+
+		</div>
+
+	</div>
+
+
+{% endblock body %}
+
+
+
+

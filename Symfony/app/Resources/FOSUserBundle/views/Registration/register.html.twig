@@ -1,0 +1,37 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+		<div class="col-lg-4 col-lg-offset-4 text-center">
+
+			<div class="panel panel-default text-center">
+
+				<div class="panel-heading">
+					<h3 class="panel-title">Register</h3>
+				</div>
+
+				<div class="panel-body text-left">
+
+					{% for type, messages in app.session.flashbag.all() %}
+						{% for message in messages %}
+							<div class="flash-{{ type }}">
+								{{ message }}
+							</div>
+						{% endfor %}
+					{% endfor %}
+
+					{% block fos_user_content %}
+						{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+					{% endblock fos_user_content %}
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+{% endblock body %}

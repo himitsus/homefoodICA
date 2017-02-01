@@ -1,0 +1,7 @@
+hf_platform:
+    resource: "@HFPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,19 @@
+#hf_platform_homepage:
+#   path:     /
+#    defaults: { _controller: HFPlatformBundle:Default:index }
+
+homefood_homepage:
+    path:     /
+    defaults: { _controller: HFPlatformBundle:Announce:index }
+
+homefood_help:
+    path:     /help
+    defaults: { _controller: HFPlatformBundle:Announce:help }
+
+homefood_david:
+    path:      /david/{id}
+    defaults:
+        _controller: HFPlatformBundle:Announce:view
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
